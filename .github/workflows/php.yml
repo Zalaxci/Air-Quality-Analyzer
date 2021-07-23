@@ -24,7 +24,7 @@ jobs:
     - name: Install dependencies
       run: php -d allow_url_fopen=On ~/composer install --prefer-dist --no-progress
     - name: Load db config
-      run: echo $DB_CONFIG >> src/.env
+      run: echo $DB_CONFIG >> db.json
       shell: bash
       env:
         DB_CONFIG : ${{ secrets.DB_CONFIG }}
