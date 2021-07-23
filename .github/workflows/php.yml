@@ -23,6 +23,11 @@ jobs:
           ${{ runner.os }}-php-
     - name: Install dependencies
       run: php -d allow_url_fopen=On ~/composer install --prefer-dist --no-progress
+    - name: Load db config
+      run: echo $DB_CONFIG >> src/.env
+      shell: bash
+      env:
+        DB_CONFIG : ${{ secrets.DB_CONFIG }}
 
     # TODO
     # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
