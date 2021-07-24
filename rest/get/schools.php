@@ -2,7 +2,7 @@
 
     require '../db.php';
 
-    $data = $database->select('schools', [
+    $schools = $database->select('schools', [
         'sch_id',
         'sch_name',
         'sch_lat',
@@ -10,6 +10,6 @@
         'password'
     ], $_GET);
 
-    print json_encode($data);
+    print json_encode($schools);
 
 ?>
