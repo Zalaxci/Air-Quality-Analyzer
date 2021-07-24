@@ -18,7 +18,7 @@ jobs:
       uses: overtrue/phplint@7.4
       with:
         path: .
-        options: --exclude=*.log
+        options: --exclude=/github/*
     - name: Psalm
       uses: docker://vimeo/psalm-github-actions
 
