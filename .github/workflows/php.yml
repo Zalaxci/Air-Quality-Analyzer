@@ -11,9 +11,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Validate composer.json and composer.lock
-      run: php -d allow_url_fopen=On ~/composer validate --strict
+      run: composer validate --strict
     - name: Install dependencies
-      run: php -d allow_url_fopen=On ~/composer install --prefer-dist --no-progress
+      run: composer install --prefer-dist --no-progress
     - name: Check PHP syntax errors
       uses: overtrue/phplint@7.4
       with:
