@@ -1,0 +1,11 @@
+path: ./
+extensions:
+  - php
+exclude:
+  - github
+  - vendor
+  - /github
+  - /vendor
+  - ./github
+  - ./vendor
+warning: false
