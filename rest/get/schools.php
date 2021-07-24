@@ -1,6 +1,6 @@
 <?php
 
-    require '../db.php';
+    require '../../db.php';
 
     $schools = $database->select('schools', [
         'sch_id',
