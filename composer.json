@@ -6,6 +6,7 @@
         "catfan/medoo": "^1.7.10"
     },
     "require-dev": {
-        "overtrue/phplint": "^2.0"
+        "overtrue/phplint": "^2.0",
+        "vimeo/psalm": "^4.8"
     }
 }
