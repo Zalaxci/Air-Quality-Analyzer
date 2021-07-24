@@ -15,7 +15,7 @@ jobs:
     - name: Install dependencies
       run: php -d allow_url_fopen=On ~/composer install --prefer-dist --no-progress
     - name: Check PHP syntax errors
-      uses: overtrue/phplint@7.2
+      uses: overtrue/phplint@7.4
       with:
         path: .
         options: --exclude=*.log
