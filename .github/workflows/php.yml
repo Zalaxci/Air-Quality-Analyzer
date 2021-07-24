@@ -5,14 +5,28 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
-  
-    runs-on: self-hosted
 
+  test:
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
     - name: Validate composer.json and composer.lock
       run: php -d allow_url_fopen=On ~/composer validate --strict
+    - name: Install dependencies
+      run: php -d allow_url_fopen=On ~/composer install --prefer-dist --no-progress
+    - name: Check PHP syntax errors
+      uses: overtrue/phplint@7.2
+      with:
+        path: .
+        options: --exclude=*.log
+    - name: Psalm
+      uses: docker://vimeo/psalm-github-actions
+
+  build:
+    needs: test
+    runs-on: self-hosted
+    steps:
+    - uses: actions/checkout@v2
     - name: Cache Composer packages
       id: composer-cache
       uses: actions/cache@v2
@@ -22,15 +36,9 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-php-
     - name: Install dependencies
-      run: php -d allow_url_fopen=On ~/composer install --prefer-dist --no-progress
+      run: php -d allow_url_fopen=On ~/composer install --no-dev --prefer-dist --no-progress
     - name: Load db config
       run: echo $DB_CONFIG >> db.json
       shell: bash
       env:
         DB_CONFIG : ${{ secrets.DB_CONFIG }}
-
-    # TODO
-    # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
-    # Docs: https://getcomposer.org/doc/articles/scripts.md
-    # - name: Run test suite
-    #   run: composer run-script test

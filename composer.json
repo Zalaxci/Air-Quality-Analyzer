@@ -4,5 +4,8 @@
     "license": "GPL-3.0-or-later",
     "require": {
         "catfan/medoo": "^1.7.10"
+    },
+    "require-dev": {
+        "overtrue/phplint": "^2.0"
     }
 }
