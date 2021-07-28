@@ -9,9 +9,21 @@
         'sch_id',
         'sch_name',
         'sch_lat',
-        'sch_long',
-        'password'
+        'sch_long'
     ], $_GET);
+
+    foreach ($schools as &$school) {
+        $school['metrics'] = $database->select('metrics', [
+            'm_id',
+            'pm2_5',
+            'pm10',
+            'temp',
+            'humidity',
+            'timestamp'
+        ], [
+            'sch_id' => $school['sch_id']
+        ]);
+    }
 
     print json_encode($schools);
 
