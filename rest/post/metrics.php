@@ -32,7 +32,9 @@
     // Else insert metrics
     $json = file_get_contents('php://input');
     $metrics = json_decode($json, true);
-    foreach ($metrics as $metric) $database->insert('metrics', $metric);
+    foreach ($metrics as $metric) {
+      if ($metric["sch_id"] == $sch_id) $database->insert('metrics', $metric);
+    }
   }
 
 ?>
