@@ -1,3 +1,5 @@
+import Chart from '../node_modules/chart.js/dist/chart.js';
+
 export function setChartColor(color) {
     Chart.defaults.global.defaultFontColor = color;
     Chart.defaults.color = color;
