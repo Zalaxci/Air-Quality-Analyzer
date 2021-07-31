@@ -1,8 +1,8 @@
-function setChartColor(color) {
+export function setChartColor(color) {
     Chart.defaults.global.defaultFontColor = color;
     Chart.defaults.color = color;
 }
-function drawChart(canvas, schools) {
+export function drawChart(canvas, schools) {
     let metrics = schools.map(school => school.metrics).flat();
     new Chart(
         canvas,

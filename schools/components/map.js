@@ -5,7 +5,7 @@ function drawMarkers(map, schools) {
     marker.addTo(map);
   });
 }
-function renderMap(mapElement, schools) {
+export function renderMap(mapElement, schools) {
   let centerCoords = [40.59688, 22.9645578];
   let zoom = 13;
   let map = L.map(mapElement);
