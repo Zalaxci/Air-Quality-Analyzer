@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schools</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin="">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css">
+    <link rel="stylesheet" href="https://zalaxci.github.io/universal-frontend/main.css">
+    <link rel="stylesheet" href="sections/sidepanel.css">
+  </head>
+  <body class="margin-none">
+    <section class="container-width page-height map"></section>
+    <section class="fixed-overlay sidepanel smaller-than-container" data-name="Particle matter">
+      <section class="container-width half-page-height">
+        <canvas class="chart" id="pm2_5"></canvas>
+      </section>
+      <section class="container-width half-page-height">
+        <canvas class="chart" id="pm10"></canvas>
+      </section>
+    </section>
+    <section class="fixed-overlay hidden sidepanel" data-name="Temperature & humidity">
+      <section class="container-width half-page-height">
+        <canvas class="chart" id="temp"></canvas>
+      </section>
+      <section class="container-width half-page-height">
+        <canvas class="chart" id="humidity"></canvas>
+      </section>
+    </section>
+    <div class="fixed-overlay" id="chart-selector" style="top: 0;"></div>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <script src="https://zalaxci.github.io/universal-frontend/main.js"></script>
+    <script src="components/chart.js"></script>
+    <script src="components/map.js"></script>
+    <script src="sections/sidepanel.js"></script>
+    <script src="data/render.js"></script>
+  </body>
+</html>
