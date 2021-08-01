@@ -17,6 +17,7 @@ function createSidepanelSelector(selector, sidepanels) {
         'btn',
         {
             innerHTML: 'None',
+            className: 'text-big clickable blue-bg round-edges-small surround-shadow',
             onclick() {
                 hideElements(sidepanels);
             }
@@ -28,6 +29,10 @@ function createSidepanelSelector(selector, sidepanels) {
         'btn',
         (selectedSidepanel) => ({
             innerHTML: selectedSidepanel.dataset.name,
+            className: 'text-big clickable blue-bg round-edges-small surround-shadow',
+            style: {
+                background: 'blue',
+            },
             onclick() {
                 hideElements(sidepanels);
                 showElements([selectedSidepanel]);
