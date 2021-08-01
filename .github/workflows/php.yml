@@ -36,8 +36,6 @@ jobs:
           ${{ runner.os }}-php-
     - name: Install dependencies
       run: php -d allow_url_fopen=On ~/composer install --no-dev --prefer-dist --no-progress
-    - name: Install chartjs
-      run: npm i chart.js
     - name: Load db config
       run: echo $DB_CONFIG >> db.json
       shell: bash
