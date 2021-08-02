@@ -36,6 +36,14 @@ jobs:
           ${{ runner.os }}-php-
     - name: Install dependencies
       run: php -d allow_url_fopen=On ~/composer install --no-dev --prefer-dist --no-progress
+    - name: Install bower
+      run: npm install bower
+    - name: Install leaflet
+      run: bower install leaflet
+    - name: Install d3
+      run: bower install d3
+    - name: Install c3
+      run: bower install c3
     - name: Load db config
       run: echo $DB_CONFIG >> db.json
       shell: bash
