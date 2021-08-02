@@ -19,7 +19,7 @@
             'pm10',
             'temp',
             'humidity',
-            'timestamp'
+            'date'
         ], [
             'sch_id' => $school['sch_id']
         ]);
