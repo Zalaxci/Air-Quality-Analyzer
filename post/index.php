@@ -1,6 +1,6 @@
 <?php
 
-  require '../../db.php';
+  require '../db.php';
 
   // Fix cors error - allow api to be used in javascript
   header('Access-Control-Allow-Origin: *');
