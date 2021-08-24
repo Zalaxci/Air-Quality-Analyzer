@@ -27,7 +27,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       env:
-        GITHUB_WORKSPACE: /home/lessons/public_html/ 
+        GITHUB_WORKSPACE: '/home/lessons/public_html/'
+      with:
+        path: '../../..'
     - name: Cache Composer packages
       id: composer-cache
       uses: actions/cache@v2
