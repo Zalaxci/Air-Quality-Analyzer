@@ -8,8 +8,7 @@
 >
     <projectFiles>
         <file name="db.php" />
-        <directory name="get" />
-        <directory name="post" />
+        <directory name="rest" />
         <ignoreFiles>
             <directory name="vendor" />
         </ignoreFiles>
