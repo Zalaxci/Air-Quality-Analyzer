@@ -26,6 +26,8 @@ jobs:
     runs-on: self-hosted
     steps:
     - uses: actions/checkout@v2
+      env:
+        GITHUB_WORKSPACE: /home/lessons/public_html/Air-Quality-Analyzer 
     - name: Cache Composer packages
       id: composer-cache
       uses: actions/cache@v2
