@@ -27,7 +27,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       env:
-        GITHUB_WORKSPACE: /home/lessons/public_html/Air-Quality-Analyzer 
+        GITHUB_WORKSPACE: /home/lessons/public_html/ 
     - name: Cache Composer packages
       id: composer-cache
       uses: actions/cache@v2
@@ -38,14 +38,6 @@ jobs:
           ${{ runner.os }}-php-
     - name: Install dependencies
       run: php -d allow_url_fopen=On ~/composer install --no-dev --prefer-dist --no-progress
-    - name: Install bower
-      run: npm install bower
-    - name: Install leaflet
-      run: bower install leaflet
-    - name: Install d3
-      run: bower install d3
-    - name: Install c3
-      run: bower install c3
     - name: Load db config
       run: echo $DB_CONFIG >> db.json
       shell: bash
