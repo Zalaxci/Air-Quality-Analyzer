@@ -22,7 +22,7 @@ This work is licensed under a
   * Για την κατασκευή του μετρητή:
     * Raspberry Pi 3 -- 41,47€
     * DHT11 Humidity & Temperature Sensor -- 4,81€
-    * Particulate Sensor SDS011 -- 22,53€
+    * Particulate Matter Sensor PMS5003 -- 22,53€
    
   * Για την κατασκευή του Server και της βάσης δεδομένων:
     * Raspberry Pi 4 -- 55,88€
@@ -38,15 +38,15 @@ This work is licensed under a
 
 **Τιμές δείκτη ποιότητας αέρα:**
 
-Καλή: 0-10
+- Καλή: 0-10
 
-Ικανοποιητική: 10-20
+- Ικανοποιητική: 10-20
 
-Μέτρια: 20-25
+- Μέτρια: 20-25
 
-Κακή: 25-50
+- Κακή: 25-50
 
-Πολύ-κακή: 50+
+- Πολύ-κακή: 50+
 
 ## Οδηγίες για τη χρήση του κώδικα στο Raspberry Pi
 Ο χρήστης θα πρέπει: 
