@@ -20,12 +20,12 @@ This work is licensed under a
 **Τα υλικά που θα χρησιμοποιήσουμε:**
 
   * Για την κατασκευή του μετρητή:
-    * Raspberry Pi 3 -- 41,47€
-    * DHT11 Humidity & Temperature Sensor -- 4,81€
-    * Particulate Matter Sensor PMS5003 -- 22,53€
+    * Raspberry Pi 3 -- 41€
+    * DHT11 Humidity & Temperature Sensor -- 5€
+    * Particulate Matter Sensor PMS5003 -- 29€
    
   * Για την κατασκευή του Server και της βάσης δεδομένων:
-    * Raspberry Pi 4 -- 55,88€
+    * Raspberry Pi 4 -- 56€
   
 **Το λογισμικό που θα χρησιμοποιήσουμε:**
 
