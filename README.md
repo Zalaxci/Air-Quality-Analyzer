@@ -1,4 +1,5 @@
-[![CC BY 4.0][cc-by-shield]][cc-by]
+Shield: [![CC BY 4.0][cc-by-shield]][cc-by]
+
 [cc-by-shield]: https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg
 
 This work is licensed under a
