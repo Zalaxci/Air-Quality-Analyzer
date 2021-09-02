@@ -14,11 +14,11 @@
 # ---------------------- END OF COPYRIGHT NOTICE ----------------------
 
 
-schoolID = input("Enter the School ID: ")
-# Getting the school ID we want the metrics to be associated with
+schoolID = input("Enter the Username: ")
+# Getting the username we want the metrics to be associated with
 
 password = raw_input("Enter the Password: ")
-# Getting the password that should match with the schoold ID we typed earlier
+# Getting the password that should match with the username we typed earlier
 
 import time
 # Import the library which is used to define the rate of the measurements
