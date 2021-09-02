@@ -10,6 +10,8 @@
 
 # You should have received a copy of the GNU General Public License
 # along with AirQuality.py  If not, see <https://www.gnu.org/licenses/>.
+# ---------------------- END OF COPYRIGHT NOTICE ----------------------
+
 
 schoolID = input("Enter the School ID: ")
 # Getting the school ID we want the metrics to be associated with
