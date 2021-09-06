@@ -11,8 +11,7 @@
 
 # You should have received a copy of the GNU General Public License
 # along with AirQuality.py  If not, see <https://www.gnu.org/licenses/>.
-# ---------------------- END OF COPYRIGHT NOTICE ----------------------
-
+# --------------------- START OF COPYRIGHT NOTICE ---------------------
 
 schoolID = input("Enter the Username: ")
 # Getting the username we want the metrics to be associated with
@@ -22,16 +21,13 @@ password = raw_input("Enter the Password: ")
 
 import time
 # Import the library which is used to define the rate of the measurements
-
 from datetime import datetime
 # Import the library which is used to get the exact time we got a measuurement
-
 from pms5003 import PMS5003
 # Import the library we use to get PMS5003 measurements
 # Find it at: <https://github.com/pimoroni/pms5003-python>
 # How to install:
 #   sudo pip install pms5003
-
 import Adafruit_DHT
 # Import the library we use to get DHT11 measurements
 # Find it at: <https://github.com/adafruit/Adafruit_Python_DHT>
@@ -43,20 +39,19 @@ import Adafruit_DHT
 
 import requests
 # Import the library with which we can send easily data to the database
-
 import json
 # Import the library which allows us to send data in JSON format
 
-measurementID=0
+measurementID = 0
 # A variable that keeps track of the measurements
 # that the Raspberry has done since we excecuted the code
 
 # Configure the PMS5003
 pms5003 = PMS5003(
-    device='/dev/ttyS0',
-    baudrate=9600,
-    pin_enable=27,
-    pin_reset=17
+    device = '/dev/ttyS0',
+    baudrate = 9600,
+    pin_enable = 27,
+    pin_reset = 17
 )
 
 # Configure the DHT11
@@ -79,7 +74,7 @@ while True:
     currentTime = datetime.now()
     # Getting the time we got the measurements
     
-    measurementID+=1
+    measurementID += 1
     # One series of measurements is finished
     
     payload = [{'sch_id': schoolID, 'pm2_5': data.pm_ug_per_m3(2.5), 'pm10': data.pm_ug_per_m3(10), 'temp': temperature, 'humidity': humidity, 'date': currentTime.strftime("%Y-%m-%d %H:%M:%S")}]
@@ -94,5 +89,5 @@ while True:
     print(r.status_code)
     # Printing in Raspberry's console, the state of the request we made so we can check if everything went well
 
-    time.sleep(600)
+    time.sleep(900)
     # Next measurement and should be in 20 minutes
