@@ -21,13 +21,16 @@ password = raw_input("Enter the Password: ")
 
 import time
 # Import the library which is used to define the rate of the measurements
+
 from datetime import datetime
 # Import the library which is used to get the exact time we got a measuurement
+
 from pms5003 import PMS5003
 # Import the library we use to get PMS5003 measurements
 # Find it at: <https://github.com/pimoroni/pms5003-python>
 # How to install:
 #   sudo pip install pms5003
+
 import Adafruit_DHT
 # Import the library we use to get DHT11 measurements
 # Find it at: <https://github.com/adafruit/Adafruit_Python_DHT>
@@ -37,6 +40,7 @@ import Adafruit_DHT
 
 import requests
 # Import the library with which we can send easily data to the database
+
 import json
 # Import the library which allows us to send data in JSON format
 
