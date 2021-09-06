@@ -34,8 +34,6 @@ import Adafruit_DHT
 # How to install:
 #   Python 2:
 #     sudo pip install Adafruit_DHT
-#   Python 3:
-#     sudo pip3 install Adafruit_DHT
 
 import requests
 # Import the library with which we can send easily data to the database
