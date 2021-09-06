@@ -90,4 +90,4 @@ while True:
     # Printing in Raspberry's console, the state of the request we made so we can check if everything went well
 
     time.sleep(900)
-    # Next measurement and should be in 20 minutes
+    # Next measurement and should be in 15 minutes
